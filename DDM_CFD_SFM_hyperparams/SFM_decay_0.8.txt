@@ -1,0 +1,50 @@
+Evaluation Results (2026-01-31|02:31:31)
+Job started at 2026-01-31|02:04:06
+Arguments:
+  device: cuda:1
+  attack_method: RTMF_Plus
+  batch_size: 8
+  model_name: ResNet50
+  beta: 0.01
+  num_iter: 300
+  ensemble_size: 1
+  eval: True
+  save_dir: ./exp/DDM_CFD_SFM_hyperparams/SFM_decay_0.8
+  image_dir: ./data/images
+  image_csv: ./data/images.csv
+  seed: 42
+  img_size: 299
+  config_idx: 1
+  debug: False
+  no_ddm: False
+  no_cfd: False
+  no_sfm: False
+  cfd_prob: 0.3
+  sfm_decay: 0.8
+  sfm_step: 0.1
+--------------------------------------------------
+Efficiency Metrics (Pure Computation):
+  Total Attack Time: 1260.49 s
+  Total Images: 828
+  Average Speed: 1.5223 s/img
+--------------------------------------------------
+Robust FTM++ Modules:
+  Use DDM: True
+  Use CFD: True (Prob: 0.3)
+  Use SFM: True (Decay: 0.8, Step: 0.1)
+--------------------------------------------------
+Model: ResNet18              | Attack Success: 89.4% (740/828)
+Model: ResNet50              | Attack Success: 97.9% (811/828)
+Model: vgg16                 | Attack Success: 87.2% (722/828)
+Model: inception_v3          | Attack Success: 76.4% (633/828)
+Model: efficientnet_b0       | Attack Success: 85.5% (708/828)
+Model: DenseNet121           | Attack Success: 90.8% (752/828)
+Model: mobilenet_v2          | Attack Success: 85.5% (708/828)
+Model: inception_resnet_v2   | Attack Success: 63.3% (524/828)
+Model: inception_v4_timm     | Attack Success: 71.9% (595/828)
+Model: xception              | Attack Success: 65.6% (543/828)
+Model: vit_base_patch16_224  | Attack Success: 8.8% (73/828)
+Model: levit_384             | Attack Success: 62.2% (515/828)
+Model: convit_base           | Attack Success: 16.8% (139/828)
+Model: twins_svt_base        | Attack Success: 45.0% (373/828)
+Model: pit                   | Attack Success: 43.4% (359/828)
